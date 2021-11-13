@@ -40,7 +40,7 @@ func i(w http.ResponseWriter, r *http.Request) {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	s := "HostName: " + name() + " IP Address: " + ip()
+	s := "Hello from App Runner. HostName: " + name() + " IP Address: " + ip()
 	var text string = os.Getenv("RETURN_TEXT")
 	if text != "" {
 		s = s + " " + text
